@@ -1,2 +1,2 @@
 # interview_proj
-interview project
+Basic Info regarding my interview project.
