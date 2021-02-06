@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <title>Topics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/addq">Add Question</a>
+      <a class="nav-item nav-link" href="/addexp">Add Experience</a>
+      <a class="nav-item nav-link " href="/experience">View Experience</a>
+        <a class="nav-item nav-link" href="/topic">Topics</a>
+        <% if (user != null) { %>
+             <a class="nav-item nav-link" href="/logout">Logout</a>
+             <% } else { %>
+                 <a class="nav-item nav-link" href="/login">Login</a>
+                  <a class="nav-item nav-link" href="/signup">Signup</a>
+                  <% } %>
+    </div>
+  </div>
+</nav>
+    <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Welcome to the Interview Prep website</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">These are some of the important topics for coding interviews</p>
+    </div>
+    <% if (user !=null) { %>
+    <div class="flex flex-wrap">
+
+      <% b.forEach((topic) => { %>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2"><%= topic.name %></h2>
+
+
+
+          <a class="text-indigo-500 inline-flex items-center" href="/topic_question/<%= topic._id %>">View  the topic
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+
+
+
+
+        </div>
+        <br>
+      	<% }) %>
+
+
+    </div>
+    <% } else {  %>
+
+  <a href="/login">  <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button> </a>
+    <% } %>
+  </div>
+</section>
+
+
+      </body>
+      </html>

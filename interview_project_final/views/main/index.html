@@ -1,0 +1,10 @@
+<% b.forEach((topic) => { %>
+	<h2><%= topic.name %> </h2>
+	<% if (user !=null) { %>
+	<a href="/topic_question/<%= topic._id %>"> Click here to find questions </a>
+	<% } else { %>
+	<a href="/">  <h3> Login to see the questions </h3> </a>
+	<% } %>
+
+
+	<% }) %>

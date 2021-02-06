@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <title>Topics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/addq">Add Question</a>
+      <a class="nav-item nav-link" href="/addexp">Add Experience</a>
+      <a class="nav-item nav-link " href="/experience">View Experience</a>
+        <a class="nav-item nav-link" href="/topic">Topics</a>
+        <% if (user != null) { %>
+             <a class="nav-item nav-link" href="/logout">Logout</a>
+             <% } else { %>
+                 <a class="nav-item nav-link" href="/login">Login</a>
+                  <a class="nav-item nav-link" href="/signup">Signup</a>
+                  <% } %>
+    </div>
+  </div>
+</nav>
+  <h1> You cannot view the admin page because you are not an admin </h1>
+
+
+      </body>
+      </html>
